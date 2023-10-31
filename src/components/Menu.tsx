@@ -2,6 +2,7 @@ import logo from "../assets/images/logo.svg";
 import iconMenu from "../assets/images/icon-hamburger.svg";
 import iconClose from "../assets/images/icon-close.svg";
 import { useState } from "react";
+import bgNavMobile from "../assets/images/bg-pattern-mobile-nav.svg";
 
 const Menu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,7 +49,7 @@ const Menu = () => {
         }
         id="primary-navigation"
       >
-        <ul aria-label="Primary" role="list">
+        <ul className="nav-ul" aria-label="Primary" role="list">
           <li>
             <a href="">How we work</a>
           </li>
@@ -59,9 +60,11 @@ const Menu = () => {
             <a href="">Account</a>
           </li>
           <li>
-            <a href="">View plans</a>
+            <button className="btn-view">View plans</button>
           </li>
         </ul>
+
+        <img src={bgNavMobile} alt="" className="bg-nav mobile" />
       </nav>
     </header>
   );
